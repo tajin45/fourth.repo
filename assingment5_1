@@ -1,0 +1,21 @@
+while True:
+    user_input = input("Please enter two words: ")
+
+    if not user_input:
+        print("--bye!!")
+        break
+    elif user_input == 'done':
+        break
+
+    words = user_input.split()
+
+    if len(words) == 1:
+        print(words[0] + " comes first")
+    elif len(words) == 2:
+        word1, word2 = words
+        if word1 < word2:
+            print(word1 + " comes first")
+        else:
+            print(word2 + " comes first")
+    else:
+        print("Please enter two words separated by a space or 'done'.")

@@ -1,0 +1,11 @@
+while True:
+    user_input = input("Enter a sentence: ")
+    rem_chr = ":,.;!?"
+
+    if user_input.lower() == "done":
+        break
+
+    before_trans = str.maketrans('','',rem_chr)
+    after_trans = user_input.translate(before_trans)
+
+    print(after_trans.upper())
